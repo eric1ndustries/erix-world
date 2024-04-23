@@ -1,4 +1,3 @@
-import React from 'react';
 import HomeButton from '../../components/HomeButton';
 import ArchiveScroll from '../../components/ArchiveScroll';
 import Image from 'next/image';
@@ -22,7 +21,7 @@ export default function Archive() {
             />
             <Image 
               className="graphic-btn"
-              alt="I Am Waiting"
+              alt="I Am Waiting" 
               src="/iAmWaiting.svg"
               width="500"
               height="400"

@@ -1,22 +1,11 @@
-import dynamic from "next/dynamic";
+import * as Tone from 'tone'
 
-const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+const erixPlayer = new Tone.Player("https://tonejs.github.io/audio/berklee/gong_1.mp3").toDestination();
 
 export default function MediaPlayer({url}: { url: string}) {
     return (
         <div>
-          <ReactPlayer
-            url={url}
-            width="100%"
-            height="75%"
-            config={{
-                soundcloud: {
-                    options: {
-                        sharing: true,
-                    }
-                }
-            }}
-          />       
+                 
         </div>
     )
 }
