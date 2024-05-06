@@ -3,4 +3,5 @@ export const PATHS = {
   MEDIA_PROJECTS: '/media',
   CODE_PROJECTS: '/code',
   ARCHIVE: '/archive',
+  MERCH: '/merch',
 };

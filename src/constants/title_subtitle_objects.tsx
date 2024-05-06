@@ -10,5 +10,9 @@ export const TITLE_SUBTITLE_OBJECTS = {
   CODE: {
     title: 'Coding',
     subtitle: 'Web applications and features',
-  }
+  },
+  MERCH: {
+    title: 'Merch',
+    subtitle: 'Stickers, posters, accessories',
+  },
 };
