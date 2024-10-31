@@ -16,7 +16,7 @@ export default function Home() {
           </h1>
           <Gateway entranceInfo={TITLE_SUBTITLE_OBJECTS.RESUME} pathString={PATHS.RESUME} blank/>
           <Gateway entranceInfo={TITLE_SUBTITLE_OBJECTS.MULTIMEDIA} pathString={PATHS.MEDIA_PROJECTS}/>
-          <Gateway entranceInfo={TITLE_SUBTITLE_OBJECTS.CODE} pathString={PATHS.CODE_PROJECTS}/>
+          {/* <Gateway entranceInfo={TITLE_SUBTITLE_OBJECTS.CODE} pathString={PATHS.CODE_PROJECTS}/> */}
           <Gateway entranceInfo={TITLE_SUBTITLE_OBJECTS.MERCH} pathString={PATHS.MERCH}/>
           <Link href={PATHS.ARCHIVE}>
             <Image 

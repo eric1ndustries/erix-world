@@ -1,19 +1,18 @@
 import React, { Children, ReactNode, createContext, useContext, useState } from "react";
 
-interface CartProviderValueType {
+interface CartProviderValue {
   name: String,
-  cart: {},
+  cart: Record<string, any>,
 };
 
 interface ShoppingCartInterface {
     children: ReactNode,
-    cartProviderValue: CartProviderValueType,
+    cartProviderValue: CartProviderValue,
 };
 
-const ShoppingCartContext = createContext(null); // or should it be null by default?
+const ShoppingCartContext = createContext<CartProviderValue | null>(null);
 
 export default function ShoppingCart({children, cartProviderValue}: ShoppingCartInterface) {
-    console.log('cartProviderValue', cartProviderValue);
     return (
         <ShoppingCartContext.Provider value={cartProviderValue}>
             {children}
