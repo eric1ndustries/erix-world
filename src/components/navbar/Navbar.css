@@ -1,0 +1,20 @@
+.navbar {
+  top: 0;
+  position: sticky;
+  background-color: var(--navbar-bg, #6c42f5);
+  height: 75px;
+}
+
+.desktop {
+
+}
+
+.mobile {
+
+}
+
+.login-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
