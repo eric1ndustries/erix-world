@@ -1,16 +1,21 @@
 "use client"
-import { useState } from 'react';
 import './Navbar.css'; // Optional: Add styles for your navbar
 import Link from 'next/link';
 import useIsMobile from '@component/hooks/useIsMobile';
+import { useAuth } from '@component/contexts/AuthContext';
 
 export default function Navbar() {
   const isMobile = useIsMobile();
+  const { user, logout, isLoading } = useAuth();
   // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   // const toggleMobileMenu = () => {
   //     setIsMobileMenuOpen(!isMobileMenuOpen);
   // }
+  const handleLogout = () => {
+    logout();
+  }
+
+  const name = user?.user_metadata?.name || user?.email;
  
   if (isMobile === undefined) return null;
   return (
@@ -19,10 +24,15 @@ export default function Navbar() {
         Erix World Logo will go here
       </Link>
       <div className="login-container">
-        {isLoggedIn ? (
-          <button className="logout-button" onClick={() => setIsLoggedIn(false)}>
-            Logout
-          </button>
+        {isLoading ? (
+          <div>Loading...</div>
+        ) : user ? (
+          <div className="user-section">
+            <span className="welcome-message">Welcome, {name}</span>
+            <button className="logout-button" onClick={handleLogout}>
+              Logout
+            </button>
+          </div>
         ) : (
           <div>
             <Link href="/login">
