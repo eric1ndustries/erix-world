@@ -3,6 +3,10 @@
   position: sticky;
   background-color: var(--navbar-bg, #6c42f5);
   height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .desktop {
@@ -17,4 +21,54 @@
   display: flex;
   justify-content: right;
   align-items: center;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.welcome-message {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.login-button, .signup-button, .logout-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.login-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  margin-right: 10px;
+}
+
+.login-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.signup-button {
+  background-color: white;
+  color: var(--navbar-bg, #6c42f5);
+}
+
+.signup-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.logout-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
