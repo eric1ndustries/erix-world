@@ -35,7 +35,7 @@ export default function LoginPage() {
     <div className="login-form-container">
       <Form className="login-form" action={handleLogin}> 
         Email: <input className="login-form-input" name="email" onChange={(e) => setEmail(e.target.value)}/>
-        Password: <input className="login-form-input" name="password" onChange={(e) => setPassword(e.target.value)} />
+        Password: <input className="login-form-input" type="password" name="password" onChange={(e) => setPassword(e.target.value)} />
         <button type="submit">Login</button>
       </Form>
     </div>
