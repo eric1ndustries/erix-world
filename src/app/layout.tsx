@@ -1,7 +1,12 @@
 import "./globals.css";
 import ExplorerLayout from "@/layouts/ExplorerLayout";
+import { ReactNode } from "react";
 
-export default function RootLayout({ children }) {
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
