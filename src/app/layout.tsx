@@ -1,5 +1,6 @@
 import "./globals.css";
 import ExplorerLayout from "@/layouts/ExplorerLayout";
+import { AuthProvider } from "@/contexts/AuthContext";
 import { ReactNode } from "react";
 
 type RootLayoutProps = {
@@ -10,9 +11,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
-        <ExplorerLayout>
-          {children}
-        </ExplorerLayout>
+        <AuthProvider>
+          <ExplorerLayout>
+            {children}
+          </ExplorerLayout>
+        </AuthProvider>
       </body>
     </html>
   );
