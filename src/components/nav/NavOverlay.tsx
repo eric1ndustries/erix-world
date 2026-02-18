@@ -1,4 +1,9 @@
-export default function NavOverlay({ open, onClose }) {
+type NavOverlayProps = {
+  open: boolean;
+  onClose: () => void;
+};
+
+export default function NavOverlay({ open, onClose }: NavOverlayProps) {
   return (
     <div
       className={`fixed inset-0 z-40 bg-black/80 backdrop-blur

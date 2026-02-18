@@ -1,6 +1,10 @@
 import ErixNav from "../svgs/ErixNav";
 
-export default function NavbarButton({ onClick }) {
+type NavbarButtonProps = {
+  onClick: () => void;
+};
+
+export default function NavbarButton({ onClick }: NavbarButtonProps) {
   return (
     <button
       onClick={onClick}
