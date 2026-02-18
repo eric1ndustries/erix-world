@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react';
 import Form from 'next/form'
 import './Signup.css'; // Optional: Add styles for your login page
-import { signupAction } from '@component/actions/authActions';
-import { useAuth } from '@component/contexts/AuthContext';
+import { signupAction } from '@/actions/authActions';
+import { useAuth } from '@/contexts/AuthContext';
 
 export default function SignupPage() {
     const { login } = useAuth();
@@ -22,7 +22,7 @@ export default function SignupPage() {
     const handleSignup = async () => {
       try {
         const result = await signupAction({ email, password, name });
-        login(result.user);
+        login(result);
       } catch (err: unknown) {
         if (err instanceof Error) {
           setError(err.message)
