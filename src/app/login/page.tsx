@@ -1,8 +1,8 @@
 "use client"
 import { useEffect, useState } from 'react';
 import Form from 'next/form'
-import { loginAction } from '@component/actions/authActions';
-import { useAuth } from '@component/contexts/AuthContext';
+import { loginAction } from '@/actions/authActions';
+import { useAuth } from '@/contexts/AuthContext';
 import './Login.css'; // Optional: Add styles for your login page
 
 export default function LoginPage() {

@@ -1,8 +1,8 @@
 "use client";
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { User } from '@supabase/supabase-js';
-import { supabase } from '@component/lib/supabaseClient';
-import { getSessionAction, logoutAction } from '@component/actions/authActions';
+import { supabase } from '@/lib/supabaseClient';
+import { getSessionAction, logoutAction } from '@/actions/authActions';
 
 interface AuthContextType {
   user: User | null;
@@ -59,6 +59,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     if (userData.user) {
       localStorage.setItem('supabase.auth.token', JSON.stringify(userData.user));
     }
+    // Redirect to home page
+    window.location.href = '/';
   };
   
   const logout = async () => {
