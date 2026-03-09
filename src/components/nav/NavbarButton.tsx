@@ -1,4 +1,4 @@
-import ErixNav from "../svgs/ErixNav";
+import ErixNav from "../SVGs/ErixNav";
 
 type NavbarButtonProps = {
   onClick: () => void;

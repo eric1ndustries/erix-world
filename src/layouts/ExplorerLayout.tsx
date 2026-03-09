@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import NavbarButton from "@/components/nav/NavbarButton";
-import NavOverlay from "@/components/nav/NavOverlay";
+import NavbarButton from "@/components/Nav/NavbarButton";
+import NavOverlay from "@/components/Nav/NavOverlay";
 import { ReactNode } from "react";
 
 type ExplorerLayoutProps = {
@@ -11,7 +11,6 @@ type ExplorerLayoutProps = {
 
 export default function ExplorerLayout({ children }: ExplorerLayoutProps) {
   const [open, setOpen] = useState(false);
-  console.log("ExplorerLayout rendered, open:", open);
   return (
     <div className="relative min-h-screen overflow-hidden">
 

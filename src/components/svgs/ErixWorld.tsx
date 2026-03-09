@@ -1,35 +1,20 @@
-import Image from "next/image";
+// components/SVGs/ErixWorld.tsx
+import ErixSVG from "@/assets/erixworld.svg";
 
 interface ErixWorldProps {
-  width?: number;
-  height?: number;
   className?: string;
-  alt?: string;
-  rotate?: number; // degrees
-  filter?: string; // e.g., "grayscale(100%)" or "invert(50%)"
+  rotate?: number;
+  filter?: string;
 }
 
-export default function ErixWorld({
-  width = 100,
-  height = 100,
-  className = "",
-  alt = "ErixWorld",
-  rotate = 0,
-  filter,
-}: ErixWorldProps) {
-  const style: React.CSSProperties = {
-    transform: rotate ? `rotate(${rotate}deg)` : undefined,
-    filter,
-  };
-
+export default function ErixWorld({ className = "", rotate = 0, filter }: ErixWorldProps) {
   return (
-    <Image
-      src="/assets/erixworld.svg"
-      width={width}
-      height={height}
-      className={className}
-      style={style}
-      alt={alt}
+    <ErixSVG
+      className={`w-full h-full ${className}`}
+      style={{
+        transform: rotate ? `rotate(${rotate}deg)` : undefined,
+        filter,
+      }}
     />
   );
 }

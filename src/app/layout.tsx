@@ -12,9 +12,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body>
         <AuthProvider>
-          <ExplorerLayout>
+          {/* <ExplorerLayout> */}
             {children}
-          </ExplorerLayout>
+          {/* </ExplorerLayout> */}
         </AuthProvider>
       </body>
     </html>
