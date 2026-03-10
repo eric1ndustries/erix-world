@@ -1,0 +1,18 @@
+/* Add these to your globals.css */
+
+/* ── Case Study Page Animations ── */
+.case-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: riseIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Animated scroll line in hero */
+.scroll-line {
+  animation: scrollDrop 2s ease-in-out infinite;
+}
+@keyframes scrollDrop {
+  0%   { transform: translateY(-100%); opacity: 1; }
+  80%  { transform: translateY(250%);  opacity: 1; }
+  100% { transform: translateY(250%);  opacity: 0; }
+}
