@@ -2,18 +2,28 @@
 
 export default function Nav() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-start px-10 py-7">
-      <a href="#" className="font-display text-xl tracking-widest text-bone">
-        ERIX
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-12 py-6 mix-blend-multiply">
+      <a
+        href="#"
+        className="font-display italic text-xl tracking-wide text-ink"
+        style={{ fontWeight: 400 }}
+      >
+        Erix World
       </a>
-      <ul className="flex flex-col items-end gap-1 list-none">
-        {["Collection", "Influences", "Objects", "Contact"].map((item) => (
-          <li key={item}>
+
+      <ul className="flex gap-8 list-none">
+        {[
+          { label: "Records",    href: "#collection" },
+          { label: "Influences", href: "#influences" },
+          { label: "Objects",    href: "#objects"    },
+          { label: "Contact",    href: "#contact"    },
+        ].map(({ label, href }) => (
+          <li key={label}>
             <a
-              href={`#${item.toLowerCase()}`}
-              className="font-mono text-[10px] tracking-[0.2em] uppercase text-bone/40 hover:text-bone/100 transition-opacity duration-200"
+              href={href}
+              className="font-mono text-[9px] tracking-[0.25em] uppercase text-faded hover:text-ink transition-colors duration-200"
             >
-              {item}
+              {label}
             </a>
           </li>
         ))}

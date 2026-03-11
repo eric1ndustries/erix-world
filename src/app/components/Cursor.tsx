@@ -10,7 +10,7 @@ export default function Cursor() {
 
     const move = (e: MouseEvent) => {
       cursor.style.left = e.clientX + "px";
-      cursor.style.top = e.clientY + "px";
+      cursor.style.top  = e.clientY + "px";
     };
 
     const expand = () => cursor.classList.add("expanded");

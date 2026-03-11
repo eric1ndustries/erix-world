@@ -1,4 +1,4 @@
-import { Section } from "/Users/ericwang/Development/erix-portfolio/casestudy/lib/cases";
+import { Section } from "../../../lib/cases";
 
 function TextSection({ heading, body }: { heading: string; body: string }) {
   return (

@@ -1,52 +1,73 @@
+import ShelfItem from "./ShelfItem";
+
 const influences = [
   {
-    type: "Book", name: "Ways of Seeing", author: "John Berger", num: "01",
+    num: "1",
+    type: "Book",
+    name: "Ways of Seeing",
+    author: "John Berger",
     icon: (
-      <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none">
-        <rect x="4" y="6" width="24" height="30" stroke="#f0ece4" strokeWidth="0.8" />
-        <line x1="4" y1="14" x2="28" y2="14" stroke="#8C1E77" strokeWidth="0.6" />
-        <line x1="8" y1="20" x2="24" y2="20" stroke="#f0ece4" strokeWidth="0.4" opacity="0.4" />
-        <line x1="8" y1="24" x2="20" y2="24" stroke="#f0ece4" strokeWidth="0.4" opacity="0.4" />
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <rect x="3" y="4" width="22" height="28" stroke="#e8d5a3" strokeWidth="0.7" opacity="0.5" />
+        <line x1="3" y1="11" x2="25" y2="11" stroke="#c17f3a" strokeWidth="0.6" />
+        <line x1="6" y1="17" x2="22" y2="17" stroke="#e8d5a3" strokeWidth="0.3" opacity="0.3" />
+        <line x1="6" y1="21" x2="18" y2="21" stroke="#e8d5a3" strokeWidth="0.3" opacity="0.3" />
       </svg>
     ),
   },
   {
-    type: "Album", name: "My Beautiful Dark Twisted Fantasy", author: "Kanye West", num: "02",
+    num: "2",
+    type: "Record",
+    name: "There's a Riot Goin' On",
+    author: "Sly & The Family Stone",
     icon: (
-      <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none">
-        <circle cx="20" cy="20" r="14" stroke="#f0ece4" strokeWidth="0.8" />
-        <circle cx="20" cy="20" r="4" stroke="#8C1E77" strokeWidth="0.8" />
-        <circle cx="20" cy="20" r="1.5" fill="#f0ece4" />
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <circle cx="18" cy="18" r="14" stroke="#e8d5a3" strokeWidth="0.7" opacity="0.5" />
+        <circle cx="18" cy="18" r="8"  stroke="#c17f3a" strokeWidth="0.6" />
+        <circle cx="18" cy="18" r="3"  stroke="#e8d5a3" strokeWidth="0.5" />
+        <circle cx="18" cy="18" r="1"  fill="#e8d5a3" opacity="0.7" />
       </svg>
     ),
   },
   {
-    type: "Film", name: "Koyaanisqatsi", author: "Godfrey Reggio", num: "03",
+    num: "3",
+    type: "Film",
+    name: "Bicycle Thieves",
+    author: "Vittorio De Sica",
     icon: (
-      <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none">
-        <rect x="5" y="5" width="30" height="22" stroke="#f0ece4" strokeWidth="0.8" />
-        <polygon points="16,11 16,21 27,16" stroke="#8C1E77" strokeWidth="0.8" fill="none" />
-        <line x1="5" y1="30" x2="35" y2="30" stroke="#f0ece4" strokeWidth="0.4" opacity="0.4" />
-        <line x1="8" y1="34" x2="28" y2="34" stroke="#f0ece4" strokeWidth="0.4" opacity="0.4" />
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <rect x="3" y="5" width="28" height="20" stroke="#e8d5a3" strokeWidth="0.7" opacity="0.5" />
+        <polygon points="14,10 14,20 24,15" stroke="#c17f3a" strokeWidth="0.7" fill="none" />
+        <line x1="3"  y1="28" x2="33" y2="28" stroke="#e8d5a3" strokeWidth="0.3" opacity="0.3" />
+        <line x1="6"  y1="32" x2="26" y2="32" stroke="#e8d5a3" strokeWidth="0.3" opacity="0.3" />
       </svg>
     ),
   },
   {
-    type: "Exhibition", name: "Form & Object", author: "Bauhaus Archive", num: "04",
+    num: "4",
+    type: "Film",
+    name: "A City of Sadness",
+    author: "Hou Hsiao-hsien",
     icon: (
-      <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none">
-        <path d="M8 32 L8 8 L32 8" stroke="#f0ece4" strokeWidth="0.8" />
-        <path d="M8 24 L18 14 L24 20 L30 10" stroke="#8C1E77" strokeWidth="0.8" fill="none" />
-        <circle cx="30" cy="10" r="2" fill="#8C1E77" />
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <rect x="3" y="5" width="28" height="20" stroke="#e8d5a3" strokeWidth="0.7" opacity="0.5" />
+        <line x1="3"  y1="13" x2="31" y2="13" stroke="#c17f3a" strokeWidth="0.4" opacity="0.6" />
+        <line x1="3"  y1="17" x2="31" y2="17" stroke="#e8d5a3" strokeWidth="0.3" opacity="0.2" />
+        <line x1="3"  y1="21" x2="31" y2="21" stroke="#e8d5a3" strokeWidth="0.3" opacity="0.2" />
+        <line x1="3"  y1="28" x2="33" y2="28" stroke="#e8d5a3" strokeWidth="0.3" opacity="0.3" />
       </svg>
     ),
   },
   {
-    type: "Designer", name: "Virgil Abloh", author: "Off-White / LV", num: "05",
+    num: "5",
+    type: "Record",
+    name: "Lady in Satin",
+    author: "Billie Holiday",
     icon: (
-      <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none">
-        <path d="M20 6 L34 28 L6 28 Z" stroke="#f0ece4" strokeWidth="0.8" fill="none" />
-        <path d="M20 14 L28 28 L12 28 Z" stroke="#8C1E77" strokeWidth="0.8" fill="none" />
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+        <path d="M4 28 L18 6 L32 28 Z"  stroke="#e8d5a3" strokeWidth="0.7" fill="none" opacity="0.5" />
+        <path d="M4 28 L18 12 L32 28 Z" stroke="#c17f3a" strokeWidth="0.5" fill="none" />
+        <circle cx="18" cy="22" r="3" stroke="#e8d5a3" strokeWidth="0.5" fill="none" opacity="0.4" />
       </svg>
     ),
   },
@@ -54,27 +75,39 @@ const influences = [
 
 export default function Influences() {
   return (
-    <section className="px-10 py-28 bg-ink" id="influences">
-      <p className="section-label reveal font-mono text-[9px] tracking-[0.35em] uppercase text-bone/40 mb-0 flex items-center gap-4
-        after:flex-1 after:h-px after:bg-bone/20">
-        Influences
-      </p>
+    <section className="px-12 py-24 bg-ink relative overflow-hidden" id="influences">
 
-      <div className="grid grid-cols-5 gap-[1px] bg-white/5 border border-white/5 mt-12 reveal">
+      {/* Lined paper texture */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(232,224,208,0.03) 40px)",
+        }}
+      />
+
+      {/* Section header */}
+      <div
+        className="relative flex justify-between items-baseline border-b pb-4 mb-14 reveal"
+        style={{ borderColor: "rgba(232,224,208,0.1)" }}
+      >
+        <h2 className="font-display italic text-label text-4xl" style={{ fontWeight: 400 }}>
+          The Shelf
+        </h2>
+        <span
+          className="font-mono text-[9px] tracking-[0.25em]"
+          style={{ color: "rgba(212,201,176,0.4)" }}
+        >
+          00{influences.length} Entries
+        </span>
+      </div>
+
+      {/* Shelf grid */}
+      <div
+        className="relative grid grid-cols-5 gap-[1px] reveal"
+        style={{ background: "rgba(232,224,208,0.05)" }}
+      >
         {influences.map((item) => (
-          <div
-            key={item.num}
-            className="relative bg-ink px-6 py-8 flex flex-col gap-4 hoverable cursor-none
-              hover:bg-white/5 transition-colors duration-300 group"
-          >
-            <span className="absolute top-4 right-4 font-mono text-[9px] tracking-[0.2em] text-bone/20">
-              {item.num}
-            </span>
-            {item.icon}
-            <span className="font-mono text-[8px] tracking-[0.3em] uppercase text-bone/40">{item.type}</span>
-            <span className="font-display text-xl tracking-wide text-bone leading-tight">{item.name}</span>
-            <span className="font-mono text-[10px] tracking-[0.15em] text-bone/40">{item.author}</span>
-          </div>
+          <ShelfItem key={item.num} {...item} />
         ))}
       </div>
     </section>
