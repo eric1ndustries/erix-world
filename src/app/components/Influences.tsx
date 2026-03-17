@@ -26,7 +26,7 @@ export default async function Influences() {
     (entries ?? []).map(async (item, index) => ({
       ...item,
       num: String(index + 1).padStart(2, "0"),
-      coverImage: await getCoverImage(item.type, item.title, item.creator),
+      coverImage: await getCoverImage(item.type, item.title, item.creator, item.year),
     }))
   );
 
