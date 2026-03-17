@@ -1,11 +1,12 @@
 "use client";
+import Image from "next/image";
 
 type ShelfItemProps = {
   num: string;
   type: string;
   name: string;
   author: string;
-  icon: React.ReactNode;
+  icon: string;
 };
 
 export default function ShelfItem({ num, type, name, author, icon }: ShelfItemProps) {
@@ -23,7 +24,9 @@ export default function ShelfItem({ num, type, name, author, icon }: ShelfItemPr
         {num}
       </span>
 
-      <div className="mb-2">{icon}</div>
+      <div className="mb-2 relative w-full aspect-square">
+        <Image alt={icon} src={icon} fill />
+      </div>
 
       <span className="font-mono text-[7px] tracking-[0.35em] uppercase text-amber/70">
         {type}
