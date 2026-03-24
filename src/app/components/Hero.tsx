@@ -2,8 +2,7 @@ import VinylPlayer from "./VinylPlayer";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen grid grid-cols-2 border-b border-ink/15 relative overflow-hidden">
-
+    <section className="min-h-screen grid grid-cols-1 md:grid-cols-2 border-b border-ink/15 relative overflow-hidden">
       {/* ── Left column ── */}
       <div className="flex flex-col justify-between px-12 pt-36 pb-14 border-r border-ink/10">
 

@@ -126,13 +126,19 @@ section { scroll-margin-top: 80px; }
   to   { transform: rotate(360deg); }
 }
 
-/* ── Track listing marquee ── */
-.tracklist-inner {
-  animation: trackScroll 24s linear infinite;
-}
-@keyframes trackScroll {
+/* ── auto scroll styling for ScrollContainer ── */
+@keyframes scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
+}
+
+.carousel-track {
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
 }
 
 /* ── Scroll Reveal ── */
@@ -151,3 +157,13 @@ section { scroll-margin-top: 80px; }
 ::-webkit-scrollbar       { width: 6px; }
 ::-webkit-scrollbar-track { background: #e8e0d0; }
 ::-webkit-scrollbar-thumb { background: #c17f3a; border-radius: 3px; }
+
+.section-padding {
+  padding: 6rem 3rem;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3rem 1rem;
+  }
+}

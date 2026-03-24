@@ -10,7 +10,7 @@ export async function getCoverImage(
   year: number,
 ): Promise<string | null> {
   switch (type.toLowerCase()) {
-    case "music": return getDiscogsCover(title, creator);
+    case "music": return getDiscogsCover({ title, creator });
     case "movie": return getTmdbCover(title, year);
     case "game":  return getRawgCover(title);
     default:      return null;
