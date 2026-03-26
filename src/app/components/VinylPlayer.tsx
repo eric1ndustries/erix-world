@@ -5,6 +5,14 @@ import { useEffect, useRef, useState, useCallback } from "react";
 const PLAYLIST_URL = "https://soundcloud.com/rojax-829938206/sets/erixworldep";
 const SC_WIDGET_API = "https://w.soundcloud.com/player/api.js";
 
+type NowPlayingItem = {
+  title: string;
+  creator: string;
+  type: string;
+  year: number | null;
+  coverImage: string | null;
+};
+
 type Track = {
   title: string;
   user: { username: string };

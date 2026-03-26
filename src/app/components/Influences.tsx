@@ -1,6 +1,7 @@
 import ShelfItem from "./ShelfItem";
 import { createClient } from "@component/lib/supabase/server";
 import { getCoverImage } from "@component/lib/media/media";
+import { ScrollContainer } from "./ScrollContainer";
 
 type NowPlayingItem = {
   id: string;
@@ -31,8 +32,7 @@ export default async function Influences() {
   );
 
   return (
-    <section className="px-12 py-24 bg-ink relative overflow-hidden" id="influences">
-
+    <section className="section-padding bg-ink relative overflow-hidden" id="influences">
       {/* Lined paper texture */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -58,21 +58,19 @@ export default async function Influences() {
       </div>
 
       {/* Shelf grid */}
-      <div
-        className="relative grid grid-cols-5 gap-[1px] reveal"
-        style={{ background: "rgba(232,224,208,0.05)" }}
-      >
+      <ScrollContainer speed={20}>
         {items.map((item: NowPlayingItem, index: number) => (
-          <ShelfItem
-            key={item.id}
-            num={String(index + 1).padStart(2, "0")}
-            type={item.type}
-            name={item.title}
-            author={item.creator}
-            icon={item.coverImage}
-          />
+          <div key={item.id} className="w-36 mx-3 flex-shrink-0">
+            <ShelfItem
+              num={String(index + 1).padStart(2, "0")}
+              type={item.type}
+              name={item.title}
+              author={item.creator}
+              icon={item.coverImage}
+            />
+          </div>
         ))}
-      </div>
+      </ScrollContainer>
     </section>
   );
 }

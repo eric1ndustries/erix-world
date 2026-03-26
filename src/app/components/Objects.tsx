@@ -45,7 +45,7 @@ const objects = [
 
 export default function Objects() {
   return (
-    <section className="px-12 py-24 bg-aged" id="objects">
+    <section className="section-padding bg-aged" id="objects">
 
       {/* Section header */}
       <div className="flex justify-between items-baseline border-b border-ink/15 pb-4 mb-14 reveal">

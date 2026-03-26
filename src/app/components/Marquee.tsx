@@ -1,3 +1,5 @@
+import { ScrollContainer } from "./ScrollContainer";
+
 const tracks = [
   { side: "A1", title: "Visual Systems"  },
   { side: "A2", title: "Digital Release" },
@@ -8,12 +10,10 @@ const tracks = [
 ];
 
 export default function Marquee() {
-  const doubled = [...tracks, ...tracks];
-
   return (
     <div className="border-t border-b border-ink/10 py-3 overflow-hidden bg-ink">
-      <div className="tracklist-inner flex whitespace-nowrap">
-        {doubled.map((track, i) => (
+      <ScrollContainer speed={20}>
+        {tracks.map((track, i) => (
           <span key={i} className="flex items-center shrink-0">
             <span className="font-mono text-[9px] tracking-[0.2em] text-amber/70 px-3">
               {track.side}
@@ -24,7 +24,7 @@ export default function Marquee() {
             <span className="text-amber/50 pr-8">◆</span>
           </span>
         ))}
-      </div>
+      </ScrollContainer>
     </div>
   );
 }

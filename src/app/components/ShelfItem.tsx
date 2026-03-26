@@ -24,8 +24,8 @@ export default function ShelfItem({ num, type, name, author, icon }: ShelfItemPr
         {num}
       </span>
 
-      <div className="mb-2 relative w-full aspect-square">
-        <Image alt={icon} src={icon} fill />
+      <div className="mb-2 relative w-full aspect-square ">
+        <Image alt={icon} src={icon} fill className="object-contain" />
       </div>
 
       <span className="font-mono text-[7px] tracking-[0.35em] uppercase text-amber/70">

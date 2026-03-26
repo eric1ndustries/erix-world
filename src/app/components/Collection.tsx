@@ -86,7 +86,7 @@ const records = [
 
 export default function Collection() {
   return (
-    <section className="px-12 py-24" id="collection">
+    <section className="section-padding" id="collection">
 
       {/* Section header */}
       <div className="flex justify-between items-baseline border-b border-ink/10 pb-4 mb-14 reveal">
